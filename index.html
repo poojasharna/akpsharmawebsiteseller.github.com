@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+      
+ <style>
+
+#a {
+
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-delay: 4s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {top: 0px; }
+  to {top: 600px; }
+}
+
+#b {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 6s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+
+#c {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 8s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+
+#e {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 400ms;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+#f {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 15s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+
+#g {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 8s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+
+#h {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 12s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+#i {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 6s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+
+#k {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 8s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+#l {
+
+position: relative;
+animation-name: example;
+animation-duration: 3s;  
+animation-delay: 2s;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+from {top: 0px; }
+to {top: 600px; }
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0F2027;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .piano {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .key {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+
+        .white {
+            width: 9%;
+            max-width: 60px;
+            height: 30%;
+            background-color: white;
+            border: 1px solid #ccc;
+            color: #000;
+            margin-top: -10%;
+        }
+
+        .black {
+            width: 8%;
+            height: 20%;
+            margin-left: 4%;
+            margin-right:4%;
+            z-index: 2;
+            background-color: black;
+            color: #fff;
+        }
+
+        .white.active {
+            background-color: #ccc;
+        }
+
+        .black.active {
+            background-color: #333;
+        }
+    </style>
+    <title>Piano</title>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJpMhubLiLL-pWXBvkslDxV0CDHAGod6hKWSxpRRU76HqDwwvg0jtXf26xd7k3tylmZ7g&usqp=CAU);">
+  
+
+
+    <div class="piano">
+        <div onclick="a()" style="margin-top: -15%;" id="a" class="key white" data-note="C"> <img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="b()" style="margin-top: -15%;" id="b" class="key black" data-note="Cs"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="c()" style="margin-top: -15%;" id="c" class="key white" data-note="D"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="d()" style="margin-top: -15%;" id="d" class="key black" data-note="Ds"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="e()" style="margin-top: -15%;" id="e"class="key white" data-note="E"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="f()" style="margin-top: -15%;" id="f" class="key white" data-note="F"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="g()" style="margin-top: -15%;" id="g" class="key black" data-note="Fs"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="h()" style="margin-top: -15%;" id="h" class="key white" data-note="G"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="i()" style="margin-top: -15%;"id="i" class="key black" data-note="Gs"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="j()" style="margin-top: -15%;" id="j" class="key white" data-note="A"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="k()" style="margin-top: -15%;" id="k"  class="key black" data-note="As"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+        <div onclick="l()" style="margin-top: -15%;" id="l" class="key white" data-note="B"><img style="height: 100%; width: 110%;" src="https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""> </div>
+    </div>  
+
+    <audio src="https://nemo0.github.io/js-piano/notes/C4.mp3" id="C"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/Cs4.mp3" id="Cs"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/D4.mp3" id="D"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/Ds4.mp3" id="Ds"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/E4.mp3" id="E"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/F4.mp3" id="F"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/Fs4.mp3" id="Fs"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/G4.mp3" id="G"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/Gs4.mp3" id="Gs"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/A4.mp3" id="A"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/As4.mp3" id="As"></audio>
+    <audio src="https://nemo0.github.io/js-piano/notes/B4.mp3" id="B"></audio>
+
+    <script>
+
+function i() {
+          document.getElementById("i").style.visibility = "hidden";
+        }
+
+        function a() {
+          document.getElementById("a").style.visibility = "hidden";
+        }
+
+        function b() {
+          document.getElementById("b").style.visibility = "hidden";
+        }
+
+        function c() {
+          document.getElementById("c").style.visibility = "hidden";
+        }
+
+        function d() {
+          document.getElementById("d").style.visibility = "hidden";
+        }
+
+        function e() {
+          document.getElementById("e").style.visibility = "hidden";
+        }
+
+        function f() {
+          document.getElementById("f").style.visibility = "hidden";
+        }
+
+        function g() {
+          document.getElementById("g").style.visibility = "hidden";
+        }
+
+
+        function h() {
+          document.getElementById("h").style.visibility = "hidden";
+        }
+
+        function j() {
+          document.getElementById("j").style.visibility = "hidden";
+        }
+
+        function k() {
+          document.getElementById("k").style.visibility = "hidden";
+        }
+
+        function l() {
+          document.getElementById("l").style.visibility = "hidden";
+        }
+        const keys = document.querySelectorAll('.key');
+        const regulars = document.querySelectorAll('.key.white');
+        const sharps = document.querySelectorAll('.key.black');
+        const whites = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
+        const blacks = ['w', 'e', 'r', 't', 'y']
+
+        keys.forEach(key => {
+            key.addEventListener('click', () => playNote(key))
+        })
+
+        document.addEventListener('keydown', e => {
+            if (e.repeat) return
+            const key = e.key
+            const whiteKeyIndex = whites.indexOf(key)
+            const blackKeyIndex = blacks.indexOf(key)
+
+            if (whiteKeyIndex > -1) playNote(regulars[whiteKeyIndex])
+            if (blackKeyIndex > -1) playNote(sharps[blackKeyIndex])
+        })
+
+        let playNote = (key) => {
+            const noteSound = document.getElementById(key.dataset.note)
+            noteSound.currentTime = 0
+            noteSound.play()
+            key.classList.add('active')
+            noteSound.addEventListener('ended', () => {
+                key.classList.remove('active')
+            })
+        }
+    </script>
+</body>
+
+</html>
